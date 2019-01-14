@@ -344,6 +344,7 @@ function draw() {
         camera.position.x = mami.position.x;
         camera.position.y = mami.position.y;
 
+
         /*limiter le mouvement de la caméra au bord de la map*/
         if (camera.position.x < canvas.width /2) {
             camera.position.x = canvas.width / 2;
@@ -596,5 +597,10 @@ function keyPressed() {
         setup();
         draw();
         loop();
+    } else if (keyCode === 74) {//debug on windows computers, reset camera position on mami sprite on pressing "j"
+      camera.position.x = mami.position.x;
+      camera.position.y = mami.position.y;
+      console.log(camera.position.x);
+      console.log(camera.position.y);
     }
 }
